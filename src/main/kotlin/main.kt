@@ -1,3 +1,5 @@
+
+
 fun main() {
     println("Hello World!")
 
@@ -42,4 +44,7 @@ fun main() {
     }
 
     println(stringLengthFunc("apple"))
+
+    var foo = Foo()
+
 }
