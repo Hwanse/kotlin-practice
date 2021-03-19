@@ -6,7 +6,17 @@ fun main() {
     println("Age : ${person.age}")
     println("Phone : ${person.phone}")
 
+    println("=====================")
+
     val Food = Food("육류")
+
+    println("=====================")
+
+    var sample1 = Outer().InnerClass();
+    println(sample1.foo())
+
+    var sample2 = Outer.Nested()
+    println(sample2.foo())
 
 }
 
@@ -47,12 +57,12 @@ class Food(type: String) {
 }
 
 class Outer {
-    val name: String = "test"
+    val name: String = "outName"
 
-    class Inner {
+    class Nested {
         fun foo() : String {
           //return name  - 외부 참조를 가지고 있지 않아서 컴파일 에러
-            return "testName"
+            return "nestedName"
         }
     }
 
